@@ -1,0 +1,44 @@
+.text_heder{
+    font-family: "Classica One";
+    text-align: center;
+}
+
+.text_heder_comment{
+    font-family: "Alexander";
+    text-align: center;
+    padding-top: 20px;
+}
+
+.text_detal{
+    vertical-align: center;
+    horiz-align: center;
+    padding-bottom: 50px;
+    padding-top: 10px;
+}
+
+.text_vertical{
+    vertical-align: center;
+    horiz-align: center;
+    padding-bottom: 50px;
+}
+
+.item_image {
+    width: 250px;
+    height: 350px;
+}
+
+.img-container {
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+.img-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.image_form {
+    width: 400px;
+    height: 500px;
+}

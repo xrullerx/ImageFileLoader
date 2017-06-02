@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block meta %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+    {% endblock %}
+
+
+    <title>{% block title %}Простой пример сайта на фреймворке Django{% endblock %}</title>
+
+    {% block stylesheets %}{% endblock %}
+
+    {% block titlehead %}{% endblock %}
+
+</head>
+
+<body>
+
+    {% block header %}{% endblock %}
+    {% block center %}{% endblock %}
+    {% block footer %}{% endblock %}
+
+</body>
+</html>

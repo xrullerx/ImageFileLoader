@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% load bootstrap3 %}
+
+{% block content %}
+    <h2>Список загруженных изображений</h2>
+    <div class="container">
+        <div class="row">
+        {% for img in images %}
+                <div class="col-md-3">
+                    <div class="item_image">
+                        <h3>{{ img.name }}</h3>
+                        <div class="img-container">
+                            <a class="fancyimage" href="{{ MEDIA_ROOT }}{{ img.image.url }}">
+                                <img class="img-responsive" src="{{ MEDIA_ROOT }}{{ img.image.url }}" />
+                            </a>
+                        </div>
+
+                        <h4>Комментарий:</h4>
+                        <div class="text_detal">
+                            {{ img.description }}
+                        </div>
+                    </div>
+                </div>
+        {% endfor %}
+        </div>
+    </div>
+{% endblock %}

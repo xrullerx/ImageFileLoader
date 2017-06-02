@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block stylesheets %}
+    {{ block.super }}
+    <link href='http://fonts.googleapis.com/css?family=Irish+Grover' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/static/fonts/alexander/alexander.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/fonts/classicaone/classicaone.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/vendor/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/myapp.css"/>
+{% endblock %}
+
+{% block titlehead %}
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="text_heder">
+                    <h1><a href="{% url 'index' %}">Тестовый сайт на Django</a></h1>
+                </div>
+                <div class="text_heder_comment">
+                    <p>Пример простого сайта</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-15">
+                    {% include 'main_menu.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block center %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                {% block content %}{% endblock %}
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block footer %}
+    <div class="jumbotron">
+        <div class="container">
+
+            {% include 'main_menu.html' %}
+
+            <div class="text_heder_comment">
+                <p>@2017 Тестовый сайт</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <link rel="stylesheet" type="text/css" href="/static/css/myapp.css"/>
+    <script type="text/javascript" src="/static/vendor/jquery/dist/jquery.js" ></script>#}
+    <script type="text/javascript" src="/static/vendor/bootstrap/dist/js/bootstrap.min.js" ></script>#}
+{% endblock %}
+
